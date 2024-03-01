@@ -1,0 +1,229 @@
+#include <iostream>
+#include <windows.h>
+#include <strings.h>
+
+using namespace std;
+
+int main()
+{
+    string hello="          Popescu Airlines presents\n            Onufreiciuc Simulator";
+    int x=0;
+    int scor=0;
+    while ( hello[x] != '\0')
+    {
+        cout << hello[x];
+    //	if ( hello[x]!= ' ' && hello[x]!= '\n') Beep(850, 300);
+    //	Sleep(100);
+        Sleep(70 + rand() % 70);
+	    x++;
+    }
+    string startgame="\n\nPress [1] to start the game.\nPress [0] to quit.";
+    x=0;
+    Sleep(500);
+    while ( startgame[x] != '\0')
+    {
+        cout << startgame[x];
+        Sleep(20 + rand() % 20);
+	    x++;
+    }
+    x=0;
+    cout<<endl<<endl;
+    int selectstart;
+    cin>>selectstart;
+    if(selectstart==0) return 0;
+    if(selectstart==1)
+    {
+        string loading="\n          Loading game";
+        string puncte="...";
+        while ( loading[x] != '\0')
+        {
+            cout << loading[x];
+            Sleep(50 + rand() % 30);
+	        x++;
+        }
+        x=0;
+        while ( puncte[x] != '\0')
+        {
+            cout << puncte[x];
+            Sleep(2000);
+	        x++;
+        }
+        cout<<endl<<endl;
+    }
+    x=0;
+    string a1="Day 1\n\nYou woke up after a long night";
+    string a2="\n.....";
+    string a3="\nAndrei: Why am I so sweaty?";
+    while ( a1[x] != '\0')
+    {
+        cout << a1[x];
+        Sleep(70 + rand() % 50);
+        x++;
+    }
+    x=0;
+    while ( a2[x] != '\0')
+    {
+        cout << a2[x];
+        Sleep(1000);
+        x++;
+    }
+    x=0;
+    while ( a3[x] != '\0')
+    {
+        cout << a3[x];
+        Sleep(100);
+        x++;
+    }
+    x=0;
+    int choice1;
+    string a4="\n\n1.Take a shower.\n2.Wear deodorant.\n3.Go to school anyway.";
+    while ( a4[x] != '\0')
+    {
+        cout << a4[x];
+        Sleep(100);
+        x++;
+    }
+    x=0;
+    cout<<endl<<endl<<"Your choice: ";
+    cin>>choice1;
+    if(choice1==1)
+    {
+        string a5="\n\nYou smell great and Adriana complimented you!";
+        scor=scor+10;
+        while ( a5[x] != '\0')
+        {
+            cout << a5[x];
+            Sleep(100);
+            x++;
+        }
+        x=0;
+    }
+    if(choice1==2)
+    {
+        string a5="\n\nYou started smelling after 2 hours and the classmates started commplaining.";
+        scor=scor-5;
+        while ( a5[x] != '\0')
+        {
+            cout << a5[x];
+            Sleep(100);
+            x++;
+        }
+        x=0;
+    }
+    if(choice1==3)
+    {
+        string a5="\n\nYou smell bad and everyone started making fun of you.";
+        scor=scor-10;
+        while ( a5[x] != '\0')
+        {
+            cout << a5[x];
+            Sleep(100);
+            x++;
+        }
+        x=0;
+
+    string a1="\n\nDay 2\n\nYou woke up after crying the whole night and didn't get any sleep";
+    string a2="\n.....";
+    string a3="\nAndrei's parents: You smell like shit, go take a shower!";
+    while ( a1[x] != '\0')
+    {
+        cout << a1[x];
+        Sleep(70 + rand() % 50);
+        x++;
+    }
+    x=0;
+    while ( a2[x] != '\0')
+    {
+        cout << a2[x];
+        Sleep(1000);
+        x++;
+    }
+    x=0;
+    while ( a3[x] != '\0')
+    {
+        cout << a3[x];
+        Sleep(100);
+        x++;
+    }
+    x=0;
+    int choice2;
+    string a4="\n\nYou are too tired and can't take a shower.\n\n1.Wear deodorant.\n2.Go to school anyway.";
+    while ( a4[x] != '\0')
+    {
+        cout << a4[x];
+        Sleep(100);
+        x++;
+    }
+    x=0;
+    cout<<endl<<endl<<"Your choice: ";
+    cin>>choice2;
+    if(choice2==1)
+    {
+        string a5="\n\nAndrei: I'm sure I don't smell anymore.";
+        string a7="\nTeachers: Did y'all have gym class before?";
+        scor=scor-5;
+        while ( a5[x] != '\0')
+        {
+            cout << a5[x];
+            Sleep(100);
+            x++;
+        }
+        x=0;
+        while ( a7[x] != '\0')
+        {
+            cout << a7[x];
+            Sleep(100);
+            x++;
+        }
+        x=0;
+    }
+    if(choice2==2)
+    {
+        string a6="\n\nYou got bullied again and started crying.";
+        scor=scor-10;
+        while ( a6[x] != '\0')
+        {
+            cout << a6[x];
+            Sleep(100);
+            x++;
+        }
+        x=0;
+    }
+    }
+    if(scor==10)
+    {
+        string ending="\n\n         Good ending!\n\nYou are clean and have showered everyday!\n";
+        while ( ending[x] != '\0')
+        {
+            cout << ending[x];
+            Sleep(100);
+            x++;
+        }
+        x=0;
+    }
+    else
+    {
+        if(scor<10 && scor>=0)
+        {
+            string ending="\n\n         Neutral ending.\n\nYou should shower everyday...\n";
+            while ( ending[x] != '\0')
+            {
+                cout << ending[x];
+                Sleep(100);
+                x++;
+            }
+            x=0;
+        }
+        else
+        {
+            string ending="\n\n          Bad ending...\n\nYou will wear the name of the smelly guy for your whole life. It's over for you, time to ropemaxx\n";
+            while ( ending[x] != '\0')
+            {
+                cout << ending[x];
+                Sleep(100);
+                x++;
+            }
+            x=0;
+        }
+    }
+}
